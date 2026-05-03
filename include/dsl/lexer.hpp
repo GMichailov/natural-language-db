@@ -19,7 +19,8 @@ enum class TokenType {
     Eos,
     Unidentifiable,
     Open_Paren,
-    Close_Paren
+    Close_Paren,
+    And
 };
 
 struct Token {

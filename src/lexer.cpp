@@ -14,7 +14,8 @@ static const std::unordered_map<std::string, TokenType> action_keywords = {
     {"<", TokenType::Less},
     {"<=", TokenType::LessOrEqual},
     {"from", TokenType::From},
-    {";", TokenType::Eos}
+    {";", TokenType::Eos},
+    {"and", TokenType::And}
 };
 
 std::string to_lower(const std::string &s) {
@@ -44,7 +45,7 @@ std::vector<std::string> split(const std::string& s) {
 std::expected<std::vector<Token>, LexingError> lex(const std::string &query) {
     std::vector<Token> parsed_tokens;
     std::string buffer;
-    
+
     auto flush_buffer = [&]() -> std::expected<void, LexingError> {
         if (buffer.empty()) return {};
         std::string lower = to_lower(buffer);
