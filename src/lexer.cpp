@@ -15,7 +15,8 @@ static const std::unordered_map<std::string, TokenType> action_keywords = {
     {"<=", TokenType::LessOrEqual},
     {"from", TokenType::From},
     {";", TokenType::Eos},
-    {"and", TokenType::And}
+    {"and", TokenType::And},
+    {"where", TokenType::Where}
 };
 
 std::string to_lower(const std::string &s) {

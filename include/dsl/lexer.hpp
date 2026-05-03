@@ -20,7 +20,8 @@ enum class TokenType {
     Unidentifiable,
     Open_Paren,
     Close_Paren,
-    And
+    And,
+    Where
 };
 
 struct Token {
